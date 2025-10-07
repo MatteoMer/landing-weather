@@ -45,7 +45,7 @@ export const faqs = [
   {
     question: "Who is Pluvia for?",
     answer:
-      "Holidaymakers planning Tenerife trips who want a financial cushion if rain disrupts beach days or excursions.",
+      "Anyone heading to Tenerife on holiday—families, couples, friend groups—who would rather not let a rainy spell ruin plans they’ve saved up for.",
   },
   {
     question: "How does the waitlist work?",

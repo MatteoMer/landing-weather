@@ -58,7 +58,7 @@
 
 ## FAQ
 1. Question: "Who is Pluvia for?"
-   - Answer: "Holidaymakers planning Tenerife trips who want a financial cushion if rain disrupts beach days or excursions."
+   - Answer: "Anyone heading to Tenerife on holiday—families, couples, friend groups—who would rather not let a rainy spell ruin plans they’ve saved up for."
 2. Question: "How does the waitlist work?"
    - Answer: "Share your contact details and we’ll notify you the moment the Tenerife pilot coverage is available."
 

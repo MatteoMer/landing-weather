@@ -1,13 +1,12 @@
 "use client";
 
+import { useRouter } from "next/navigation";
 import { useState } from "react";
-
-import { ThankYouModal } from "./ThankYouModal";
 
 export function LeadCapture() {
   const [status, setStatus] = useState<"idle" | "submitting" | "success">("idle");
   const [errorMessage, setErrorMessage] = useState<string | null>(null);
-  const [modalOpen, setModalOpen] = useState(false);
+  const router = useRouter();
 
   async function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();
@@ -38,7 +37,7 @@ export function LeadCapture() {
 
       setStatus("success");
       form.reset();
-      setModalOpen(true);
+      router.push("/thank-you");
     } catch (error) {
       console.error(error);
       setErrorMessage(
@@ -111,7 +110,6 @@ export function LeadCapture() {
           </form>
         </div>
       </div>
-      <ThankYouModal open={modalOpen} onClose={() => setModalOpen(false)} />
     </section>
   );
 }
