@@ -1,62 +1,55 @@
 export const trustBadges = [
   {
-    label: "Assureurs partenaires",
-    description: "Solutions paramétriques co-construites avec des acteurs français",
+    label: "Powered by AEMET data",
+    description: "Official Spanish rainfall feeds trigger every payout",
   },
   {
-    label: "Données météo fiables",
-    description: "Météo-France comme source officielle pour déclencher les indemnités",
+    label: "Payments you can plan on",
+    description: "Fixed compensation amounts agreed before departure",
   },
 ];
 
 export const benefits = [
   {
-    title: "Couverture claire",
-    copy: "Seuil, montant et calendrier fixés dès la signature pour éviter toute surprise.",
+    title: "Clear, upfront payouts",
+    copy: "Thresholds, amounts, and timelines are locked before you fly—no hidden clauses.",
   },
   {
-    title: "Zéro paperasse",
-    copy: "Aucun dossier à constituer : la météo déclenche automatiquement l'indemnité.",
+    title: "Zero claim paperwork",
+    copy: "If Tenerife’s skies turn gray, Pluvia pays automatically without forms or call centers.",
   },
   {
-    title: "Pensé pour Paris",
-    copy: "Modèles calibrés sur l'activité estivale des bars et restaurants parisiens.",
+    title: "Built for holidaymakers",
+    copy: "Coverage tailored to resort stays, villa rentals, and Canary Island excursions.",
   },
 ];
 
 export const steps = [
   {
-    title: "1. Définir le seuil",
-    body: "On choisit ensemble le nombre de jours de pluie ou le cumul à partir duquel l'indemnité est activée.",
+    title: "1. Set your travel dates",
+    body: "Tell us when you’ll be in Tenerife and we lock in the coverage window before you fly.",
   },
   {
-    title: "2. Suivre la météo",
-    body: "Nous monitorons Météo-France pour comparer la réalité aux normales saisonnières.",
+    title: "2. We track the weather",
+    body: "Pluvia watches AEMET’s rainfall data every day of your stay and compares it to the seasonal average.",
   },
   {
-    title: "3. Recevoir l'indemnité",
-    body: "Si le seuil est franchi, le virement part automatiquement, sans justificatif à fournir.",
+    title: "3. Rain triggers your payout",
+    body: "If the weather crosses the agreed threshold, the fixed compensation is wired to you automatically—no follow-up needed.",
   },
 ];
 
-export const testimonials = [
-  {
-    quote:
-      "Après trois week-ends pluvieux, l'indemnité a couvert nos frais d'équipe et un nouveau stock.",
-    name: "Claire D.",
-    role: "Gérante d'un bar à cocktails, Canal Saint-Martin",
-  },
-];
+export const testimonials: never[] = [];
 
 export const faqs = [
   {
-    question: "À qui s'adresse TODO ?",
+    question: "Who is Pluvia for?",
     answer:
-      "TODO accompagne les bars parisiens qui veulent lisser leurs revenus face aux mois les plus pluvieux, sans paperasse ni gestion supplémentaire.",
+      "Holidaymakers planning Tenerife trips who want a financial cushion if rain disrupts beach days or excursions.",
   },
   {
-    question: "Comment fonctionne la liste d'attente ?",
+    question: "How does the waitlist work?",
     answer:
-      "Inscrivez vos coordonnées et nous vous préviendrons dès que les premiers contrats pilotes s'ouvrent dans Paris intramuros.",
+      "Share your contact details and we’ll notify you the moment the Tenerife pilot coverage is available.",
   },
 ];

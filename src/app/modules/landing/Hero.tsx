@@ -14,29 +14,29 @@ export function Hero() {
       <div className="relative mx-auto flex max-w-4xl flex-col gap-8 px-6 pb-20 pt-16 lg:px-12">
         <div className="space-y-5 max-w-2xl">
           <span className="inline-flex w-fit items-center rounded-full bg-[#1D4ED8]/12 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.3em] text-[#1D4ED8]">
-            TODO
+            Pluvia
           </span>
           <h1 className="text-[2.75rem] font-semibold leading-[1.15] sm:text-[3.1rem]">
-            Il pleut en été? On vous dédommage automatiquement.
+            Rain on your Tenerife holiday? We reimburse automatically.
           </h1>
           <p className="text-[1.125rem] leading-[1.65] text-[#1A1A1A]">
-            Pour les bars et restos parisiens : si l’été est plus pluvieux que prévu, vous recevez une compensation financière sans paperasse.
+            Pluvia is a new kind of cover for Tenerife getaways: if rare rain soaks your stay, we send a payout automatically—no paperwork or claims.
           </p>
           <p className="text-[0.95rem] leading-[1.7] text-[#94A3B8]">
-            Nous ouvrons bientôt notre programme pilote. Rejoignez la liste d&apos;attente pour être contacté en priorité.
+            Our pilot program opens soon for Canary Island travelers. Join the waitlist to hear first.
           </p>
           <div className="flex flex-col gap-3 sm:flex-row sm:items-center">
             <Link
-              href="#liste-attente"
+              href="#waitlist"
               className="inline-flex min-w-[220px] items-center justify-center rounded-full bg-[#1D4ED8] px-8 py-3 text-base font-semibold text-white shadow-[0_20px_32px_-18px_rgba(37,99,235,0.7)] transition hover:bg-[#2563EB] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#1D4ED8]"
             >
-              Rejoindre le pilote parisien
+              Join the Tenerife pilot
             </Link>
             <Link
-              href="#comment-ca-marche"
+              href="#how-it-works"
               className="inline-flex items-center justify-center gap-2 rounded-full border border-[#CBD5F5] px-5 py-3 text-sm font-semibold text-[#1D4ED8] transition hover:border-[#1D4ED8]/70 hover:text-[#2563EB]"
             >
-              En savoir plus
+              See how it works
               <span aria-hidden>→</span>
             </Link>
           </div>
@@ -47,8 +47,8 @@ export function Hero() {
           >
             <div className="pointer-events-none absolute inset-0 rounded-2xl border border-[#E2E8F0]/80" />
             <Image
-              src="/weather.png"
-              alt="Illustration d&apos;un bar parisien protégé de la pluie"
+              src="/weather.jpg"
+              alt="Rain-soaked Tenerife beach terrace"
               fill
               priority
               className="object-cover object-center"

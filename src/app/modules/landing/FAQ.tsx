@@ -5,9 +5,9 @@ export function FAQ() {
     <section id="faq" className="bg-white text-[#1A1A1A]">
       <div className="mx-auto max-w-3xl px-6 pb-16 pt-10">
         <div className="mb-8">
-          <h2 className="text-3xl font-semibold sm:text-4xl">Questions fréquentes</h2>
+          <h2 className="text-3xl font-semibold sm:text-4xl">Frequently asked questions</h2>
           <p className="mt-3 text-base text-[#6B7280]">
-            Des réponses rapides pour valider la couverture avec votre équipe.
+            Quick answers so you know exactly how Pluvia’s Tenerife protection works.
           </p>
         </div>
         <dl className="space-y-4">

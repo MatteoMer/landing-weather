@@ -31,16 +31,16 @@ export function ThankYouModal({ open, onClose }: ThankYouModalProps) {
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 px-4">
       <div className="max-w-sm rounded-2xl bg-white p-8 text-center text-[#1A1A1A] shadow-xl">
-        <h3 className="text-xl font-semibold">Merci pour votre inscription !</h3>
+        <h3 className="text-xl font-semibold">You’re on the Tenerife list!</h3>
         <p className="mt-3 text-sm text-[#475569]">
-          Nous vous préviendrons dès que le pilote parisien ouvre. Surveillez votre boîte mail !
+          We’ll email you as soon as the Pluvia pilot opens so you can lock in weather protection for your trip.
         </p>
         <button
           type="button"
           onClick={onClose}
           className="mt-6 inline-flex w-full items-center justify-center rounded-full bg-[#1D4ED8] px-5 py-3 text-sm font-semibold text-white transition hover:bg-[#2563EB]"
         >
-          Fermer
+          Close
         </button>
       </div>
     </div>

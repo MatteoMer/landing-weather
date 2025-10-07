@@ -15,23 +15,25 @@ export function LeadCapture() {
     setErrorMessage(null);
     const form = event.currentTarget;
     const formData = new FormData(form);
+    const payload = Object.fromEntries(formData.entries());
 
     try {
       const response = await fetch("https://formspree.io/f/movkwrqo", {
         method: "POST",
-        body: formData,
+        body: JSON.stringify(payload),
         headers: {
           Accept: "application/json",
+          "Content-Type": "application/json",
         },
       });
 
       if (!response.ok) {
-        throw new Error("L'envoi a échoué");
+        throw new Error("Submission failed");
       }
 
       const result = await response.json();
       if (result?.ok === false || result?.errors) {
-        throw new Error("Merci de réessayer plus tard.");
+        throw new Error("Please try again in a moment.");
       }
 
       setStatus("success");
@@ -42,36 +44,36 @@ export function LeadCapture() {
       setErrorMessage(
         error instanceof Error
           ? error.message
-          : "Une erreur est survenue. Merci de réessayer."
+          : "Something went wrong. Please try again."
       );
       setStatus("idle");
     }
   }
 
   return (
-    <section id="liste-attente" className="bg-white text-[#1A1A1A]">
+    <section id="waitlist" className="bg-white text-[#1A1A1A]">
       <div className="mx-auto max-w-3xl px-6 pb-16 pt-10">
         <div className="rounded-3xl border border-[#E5E7EB] bg-white p-8 shadow-sm">
-          <h2 className="text-3xl font-semibold sm:text-4xl">Inscription liste d&apos;attente</h2>
+          <h2 className="text-3xl font-semibold sm:text-4xl">Join the waitlist</h2>
           <p className="mt-3 text-base text-[#6B7280]">
-            Donnez-nous vos coordonnées et nous vous contacterons dès que les premières offres TODO seront disponibles à Paris.
+            Leave your details and we&apos;ll reach out as soon as the Pluvia Tenerife pilot opens to travelers.
           </p>
           <form onSubmit={handleSubmit} className="mt-8 space-y-5" autoComplete="on">
             <div>
               <label className="block text-sm font-semibold text-[#1A1A1A]" htmlFor="name">
-                Nom complet
+                Full name
               </label>
               <input
                 id="name"
                 name="name"
                 required
                 className="mt-2 w-full rounded-2xl border border-[#E5E7EB] bg-white px-4 py-3 text-sm text-[#1A1A1A] placeholder:text-[#9CA3AF] focus:border-[#1D4ED8] focus:outline-none focus:ring-2 focus:ring-[#2563EB]/40"
-                placeholder="Alex Martin"
+                placeholder="Alex Morgan"
               />
             </div>
             <div>
               <label className="block text-sm font-semibold text-[#1A1A1A]" htmlFor="email">
-                E-mail
+                Email
               </label>
               <input
                 id="email"
@@ -79,18 +81,18 @@ export function LeadCapture() {
                 type="email"
                 required
                 className="mt-2 w-full rounded-2xl border border-[#E5E7EB] bg-white px-4 py-3 text-sm text-[#1A1A1A] placeholder:text-[#9CA3AF] focus:border-[#1D4ED8] focus:outline-none focus:ring-2 focus:ring-[#2563EB]/40"
-                placeholder="alex@votrebar.fr"
+                placeholder="alex@example.com"
               />
             </div>
             <div>
               <label className="block text-sm font-semibold text-[#1A1A1A]" htmlFor="bar">
-                Nom du bar (optionnel)
+                Accommodation or booking name (optional)
               </label>
               <input
-                id="bar"
-                name="bar"
+                id="booking"
+                name="booking"
                 className="mt-2 w-full rounded-2xl border border-[#E5E7EB] bg-white px-4 py-3 text-sm text-[#1A1A1A] placeholder:text-[#9CA3AF] focus:border-[#1D4ED8] focus:outline-none focus:ring-2 focus:ring-[#2563EB]/40"
-                placeholder="Bar du Canal"
+                placeholder="Villa Ocean Breeze"
               />
             </div>
             <button
@@ -98,13 +100,13 @@ export function LeadCapture() {
               className="w-full rounded-2xl bg-[#1D4ED8] px-5 py-3 text-sm font-semibold text-white transition hover:bg-[#2563EB] disabled:cursor-not-allowed disabled:bg-[#6B7280] disabled:text-white/70"
               disabled={status === "submitting"}
             >
-              {status === "success" ? "Inscription confirmée" : status === "submitting" ? "Envoi…" : "Rejoindre la liste"}
+              {status === "success" ? "You’re on the list" : status === "submitting" ? "Sending…" : "Join the waitlist"}
             </button>
             {errorMessage && (
               <p className="text-xs text-red-500">{errorMessage}</p>
             )}
             <p className="text-xs text-[#6B7280]">
-              Nous n&apos;utiliserons vos informations que pour vous prévenir du lancement TODO.
+              We only use your info to update you about Pluvia’s Tenerife launch.
             </p>
           </form>
         </div>

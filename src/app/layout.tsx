@@ -5,16 +5,16 @@ import "./globals.css";
 const inter = Inter({ subsets: ["latin"], display: "swap" });
 
 export const metadata: Metadata = {
-  title: "TODO | Assurance météo pour bars",
+  title: "Pluvia | Weather protection for Tenerife holidays",
   description:
-    "TODO propose une assurance météo simple pour les bars parisiens : rejoignez la liste d'attente pour le programme pilote.",
+    "Pluvia reimburses Tenerife trips when rare rain hits—join the waitlist to access the pilot program.",
   alternates: {
     canonical: "/",
   },
   openGraph: {
-    title: "TODO | Assurance météo pour bars",
+    title: "Pluvia | Weather protection for Tenerife holidays",
     description:
-      "Rejoignez la liste d'attente TODO et soyez parmi les premiers bars parisiens à bénéficier d'une protection météo automatisée.",
+      "Join the Pluvia waitlist and be among the first travelers protected against rainy days in Tenerife.",
   },
 };
 
@@ -24,7 +24,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="fr">
+    <html lang="en">
       <body className={inter.className}>{children}</body>
     </html>
   );
